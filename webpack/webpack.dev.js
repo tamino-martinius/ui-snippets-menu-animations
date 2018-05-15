@@ -33,7 +33,7 @@ export const config = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   module: {
     rules: [
@@ -41,19 +41,19 @@ export const config = {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
-        exclude: '/node_modules/'
+        exclude: '/node_modules/',
       },
       {
         test: /\.html?$/,
         loader: 'raw-loader',
         include: sourcePath,
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         enforce: 'pre',
         test: /\.ts$/,
         use: "source-map-loader",
-        exclude: '/node_modules/'
+        exclude: '/node_modules/',
       },
       {
         test: /\.ts$/,
@@ -62,25 +62,25 @@ export const config = {
             loader: 'ts-loader',
             options: {
               happyPackMode: true,
-            }
-          }
+            },
+          },
         ],
         include: sourcePath,
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
         include: sourcePath,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: true,
               importLoaders: 1,
-              minimize: true
+              minimize: true,
             },
           },
           {
@@ -93,15 +93,15 @@ export const config = {
                 require("postcss-cssnext")(),
                 //https://github.com/ai/browserslist
                 require("autoprefixer")({
-                  browsers: ['last 2 versions', 'ie >= 9']
-                })
+                  browsers: ['last 2 versions', 'ie >= 9'],
+                }),
               ])
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
-    ]
-  }
+    ],
+  },
 };
 
 export default config;

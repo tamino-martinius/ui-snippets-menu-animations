@@ -8,7 +8,7 @@ export const config = {
     'bundle': [
       scriptPath + '/render.ts',
       sourcePath + '/',
-    ]
+    ],
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -17,27 +17,27 @@ export const config = {
     filename: 'static/js/[name].[hash].js',
     path: buildPath,
     chunkFilename: 'static/js/[name].chunk.js',
-    publicPath: './'
+    publicPath: './',
   },
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
+      chunks: 'all',
+    },
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
     new CopyWebpackPlugin(
       [
-        { from: 'public' }
+        { from: 'public' },
       ],
       {
         ignore: [
           // Boilerplate will not be copied
           'index.html',
-        ]
-      }
+        ],
+      },
     )
-  ]
+  ],
 };
 
 export default config;

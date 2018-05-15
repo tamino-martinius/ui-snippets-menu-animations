@@ -21,10 +21,10 @@ export const config = {
           beautify: false,
           ecma: 6,
           comments: false,
-          mangle: false
-        }
-      })
-    ]
+          mangle: false,
+        },
+      }),
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -59,8 +59,8 @@ export const config = {
       algorithm: "gzip",
       test: /\.(js|html|css)$/,
       threshold: 10240,
-      minRatio: 0.8
-    })
+      minRatio: 0.8,
+    }),
   ],
   module: {
     rules: [
@@ -68,15 +68,15 @@ export const config = {
         test: /\.html?$/,
         loader: 'raw-loader',
         include: sourcePath,
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         enforce: 'pre',
         test: /\.js$/,
         loader: 'source-map-loader',
         exclude: [
-          '/node_modules/'
-        ]
+          '/node_modules/',
+        ],
       },
       {
         test: /\.ts$/,
@@ -85,11 +85,11 @@ export const config = {
             loader: 'ts-loader',
             options: {
               happyPackMode: true,
-            }
-          }
+            },
+          },
         ],
         include: sourcePath,
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/i,
@@ -102,7 +102,7 @@ export const config = {
               options: {
                 sourceMap: true,
                 importLoaders: 1,
-                minimize: true
+                minimize: true,
               }
             },
             {
@@ -116,15 +116,15 @@ export const config = {
                   require("postcss-cssnext")(),
                   //https://github.com/ai/browserslist
                   require("autoprefixer")({
-                    browsers: ['last 2 versions', 'ie >= 9']
-                  })
-                ]
-              }
-            }
-          ]
-        })
-      }
-    ]
+                    browsers: ['last 2 versions', 'ie >= 9'],
+                  }),
+                ],
+              },
+            },
+          ],
+        }),
+      },
+    ],
   },
 };
 
