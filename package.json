@@ -10,6 +10,24 @@
   "engines": {
     "node": ">=8.10"
   },
+  "description": "Simple CodePen like Template which supports postCSS and TypeScript to build UI Snippets",
+  "keywords": [
+    "ui",
+    "snippets",
+    "snippet",
+    "template",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "typescript",
+    "tslint",
+    "cssModules",
+    "postCSS",
+    "webpack",
+    "stylint"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/taminomartinius/ui-snippets-template.git"
