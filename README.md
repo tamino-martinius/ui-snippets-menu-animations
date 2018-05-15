@@ -28,7 +28,7 @@ Use this Template to quickly build UI snippets.
 
 - Clone repository
   - `git clone https://github.com/tamino-martinius/ui-snippets-template`
-  - or go to https://github.com/tamino-martinius/ui-snippets-template and download as zip
+  - or go to [GitHub](https://github.com/tamino-martinius/ui-snippets-template) and download as zip
 - Rename and enter folder
 - install packages `npm install`
   Node.js `>= 8.10` suggested for module syntax and `async` / `await` without TypeScript
