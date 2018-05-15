@@ -32,6 +32,13 @@
     "type": "git",
     "url": "git://github.com/taminomartinius/ui-snippets-template.git"
   },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --mode development --open --config ./webpack/webpack.config.babel.js --env.env=dev",
+    "build": "webpack --mode production --config ./webpack/webpack.config.babel.js --env.env=prod",
+    "debug:prod": "npm run debug -- --env.env=prod --display-error-details",
+    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.babel.js"
+  },
   "devDependencies": {
     "@types/node": "10.0.9",
     "@types/webpack-env": "1.13.6",
