@@ -36,7 +36,7 @@ Use this Template to quickly build UI snippets.
 ### Open the project with your Text Editor
 
 Tip for VS Code Users:
-Add `code` command to your Terminal by pressing cmd + shift + p and search for `Shell Command: Install 'code' command to PATH`
+Add `code` command to your Terminal by pressing cmd + shift + p and search for `Shell Command: Install 'code' command to PATH`.
 
 Now you can open the project using this command:
 
@@ -44,6 +44,14 @@ Now you can open the project using this command:
 code .
 ```
 
+### Use without TypeScript
+
+Rename `/src/index.ts` to `/src/index.js` before starting the Server.
+
+### Use without PostCSS
+
+Just don't use the additional postCSS features.
+ 
 ### Start development server with Hot Reloading
 
 ```bash
