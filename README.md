@@ -51,7 +51,7 @@ Rename `/src/index.ts` to `/src/index.js` before starting the Server.
 ### Use without PostCSS
 
 Just don't use the additional postCSS features.
- 
+
 ### Start development server with Hot Reloading
 
 ```bash
