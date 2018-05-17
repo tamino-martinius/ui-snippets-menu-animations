@@ -37,7 +37,8 @@
     "dev": "webpack-dev-server --mode development --open --config ./webpack/webpack.config.babel.js --env.env=dev",
     "build": "webpack --mode production --config ./webpack/webpack.config.babel.js --env.env=prod",
     "debug:prod": "npm run debug -- --env.env=prod --display-error-details",
-    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.babel.js"
+    "debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js --config ./webpack/webpack.config.babel.js",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "devDependencies": {
     "@types/node": "10.0.9",
