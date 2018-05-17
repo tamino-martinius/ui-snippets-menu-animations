@@ -110,13 +110,15 @@ export const config = {
               options: {
                 sourceMap: true,
                 plugins: () => [
-                  require("postcss-nesting")(),
-                  require("postcss-custom-properties")(),
                   require("postcss-each")(),
-                  require("postcss-cssnext")(),
-                  //https://github.com/ai/browserslist
-                  require("autoprefixer")({
-                    browsers: ['last 2 versions', 'ie >= 9'],
+                  require("postcss-nested")(),
+                  require("postcss-cssnext")({
+                    features: {
+                      customProperties: {
+                        warnings: false,
+                        preserve: true,
+                      },
+                    },
                   }),
                 ],
               },
