@@ -64,4 +64,10 @@ npm run start
 npm run build
 ```
 
+### Deploy to github pages
+
+```bash
+npm run deploy
+```
+
 ### Create Epic UI snippets
