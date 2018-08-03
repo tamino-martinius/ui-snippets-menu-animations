@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>1</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <path d="M7.10542736e-15,60 L62,60 C75,60 68,32 58,42 L35,65" id="line--3" stroke="#FFFFFF" stroke-width="3"></path>
-        <path d="M0,50 L70,50" id="line--2" stroke="#FFFFFF" stroke-width="3"></path>
-        <path d="M0,40 L62,40 C75,40 68,68 58,58 L35,35" id="line--1" stroke="#FFFFFF" stroke-width="3"></path>
-    </g>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35"/>
+  <path class="line--2" d="M0 50h70"/>
+  <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65"/>
 </svg>
