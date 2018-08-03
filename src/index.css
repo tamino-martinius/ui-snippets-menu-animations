@@ -32,6 +32,13 @@ path {
   stroke-linecap: round;
 }
 
+.menu path {
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+}
+
 .icon--1 { background-color: #3F77E9; }
 .icon--2 { background-color: #2C96F2; }
 .icon--3 { background-color: #34ADF0; }
@@ -59,12 +66,14 @@ path {
 }
 .icon--3 .line--1 { 
   --total-length: 111.22813415527344;
+  --offset: -50.22813415527344;
 }
 .icon--3 .line--2 { 
   --total-length: 99;
 }
 .icon--3 .line--3 { 
   --total-length: 111.22813415527344;
+  --offset: -50.22813415527344;
 }
 .icon--4 .line--1 { 
   --total-length: 126.38166809082031;
@@ -86,10 +95,12 @@ path {
 }
 .icon--6 .line--1 { 
   --total-length: 103.35061645507812;
+  --offset: -42.35061645507812;
 }
 .icon--6 .line--2 { 
   --total-length: 99;
 }
 .icon--6 .line--3 { 
   --total-length: 103.35061645507812;
+  --offset: -42.35061645507812;
 }
