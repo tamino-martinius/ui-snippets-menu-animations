@@ -5,18 +5,8 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <g id="export" stroke="#FFFFFF" stroke-width="3">
-            <path d="M0,40 L65,40 C72,40 82,50 90,50 L105,50 C108.333333,50 113.333333,46.6666667 120,40 L160,0" id="line--3"></path>
-            <path d="M0,50 L105,50" id="line--2"></path>
-            <path d="M0,60 L65,60 C72,60 82,50 90,50 L105,50 C108.333333,50 113.333333,53.3333333 120,60 L160,100" id="line--1"></path>
-        </g>
-        <g id="cross" stroke="#50E3C2" stroke-linejoin="round" stroke-width="3">
-            <path d="M50,50 L58,42 L50,50 L42,42 L50,50 Z M50,50 L42,58 L50,50 L58,58 L50,50 Z" id="bltr"></path>
-        </g>
-        <g id="menu" stroke="#4A90E2" stroke-linejoin="bevel" stroke-width="3">
-            <path d="M38,60 L62,60" id="bottom"></path>
-            <path d="M38,50 L62,50" id="middle"></path>
-            <path d="M38,40 L62,40" id="top"></path>
-        </g>
+        <path d="M0,40 L65,40 C72,40 82,50 90,50 L105,50 C108.333333,50 113.333333,46.6666667 120,40 L160,0" id="line--3" stroke="#FFFFFF" stroke-width="3"></path>
+        <path d="M0,50 L105,50" id="line--2" stroke="#FFFFFF" stroke-width="3"></path>
+        <path d="M0,60 L65,60 C72,60 82,50 90,50 L105,50 C108.333333,50 113.333333,53.3333333 120,60 L160,100" id="line--1" stroke="#FFFFFF" stroke-width="3"></path>
     </g>
 </svg>
