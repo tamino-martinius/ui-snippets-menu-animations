@@ -1,3 +1,51 @@
-b {
-  color: green;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #121314;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vw;
+  height: 66vw;
+  top: calc(50vh - 33vw);
+  position: absolute;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu--1 {
+  background-color: #3F77E9;
+}
+
+.menu--2 {
+  background-color: #2C96F2;
+}
+
+.menu--3 {
+  background-color: #34ADF0;
+}
+
+.menu--4 {
+  background-color: #56BCE1;
+}
+
+.menu--5 {
+  background-color: #79CCD4;
+}
+
+.menu--6 {
+  background-color: #9DDBC6;
 }
