@@ -1,0 +1,62 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: pointer;
+}
+label input {
+  display: none;
+}
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: url("#gooey");
+}
+path {
+  fill: none;
+  stroke-linecap: round;
+  stroke: #6f92bd;
+  stroke-width: 3.5px;
+}
+.icon {
+  transition: all 1000ms cubic-bezier(0.4, 0, 0.6, 1);
+  transform: translateX(0px);
+}
+.top,
+.bottom {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  transition-duration: 1000ms, 1000ms, 500ms;
+  transition-property: stroke-dasharray, stroke-dashoffset, transform;
+  transition-delay: 0ms;
+  stroke-dasharray: 16px 110.21px;
+  stroke-dashoffset: -86.21px;
+  transform: translateY(0px);
+}
+.middle {
+  transition: all 600ms cubic-bezier(0.5, -0.1, 0.5, 1.1);
+  stroke-dasharray: 16px 56px;
+  stroke-dashoffset: -32px;
+  transition-delay: 300ms;
+}
+input:checked + svg .icon {
+  transform: translateX(-66px);
+}
+input:checked + svg .top,
+input:checked + svg .bottom {
+  stroke-dashoffset: -9.9px;
+  stroke-dasharray: 19.8px 110.21px;
+  transition-delay: 0ms, 0ms, 500ms;
+}
+input:checked + svg .top {
+  transform: translateY(18px);
+}
+input:checked + svg .bottom {
+  transform: translateY(-18px);
+}
+input:checked + svg .middle {
+  stroke-dashoffset: 16px;
+  transition-delay: 0ms;
+}

@@ -1,0 +1,44 @@
+@import "nib"
+
+easeInOutSine = cubic-bezier(0.445, 0.050, 0.550, 0.950)
+easeOutBack   = cubic-bezier(0.250,-0.250, 0.750, 1.250)
+easing = easeOutBack
+duration = .5s
+
+back-color = #5677FC
+fore-color = #ECEFFE
+
+body
+html
+div
+  background back-color
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+  text-align center
+
+svg
+  width 200px
+  height 200px
+  cursor pointer
+  transform translate3d(0,0,0)
+
+path
+  fill none
+  transition stroke-dashoffset duration easing, stroke-dasharray duration easing
+  stroke-width 8px
+  stroke-linecap round
+  stroke fore-color
+  stroke-dashoffset -20px
+  &#top
+  &#bottom
+  &#middle
+    stroke-dasharray 60px 300px
+
+.arrow
+  path
+    &#top
+    &#bottom
+      stroke-dasharray 25px 300px
+      stroke-dashoffset -230px

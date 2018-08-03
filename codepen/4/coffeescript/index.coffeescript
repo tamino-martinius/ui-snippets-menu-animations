@@ -1,0 +1,17 @@
+i = setInterval ->
+  $("div").toggleClass "arrow"
+, 1500
+
+$("div").click ->
+  clearInterval i
+  $("div").toggleClass "arrow"
+
+resize = ->
+  $("body").css
+    "margin-top": ~~((window.innerHeight - 200) / 2) + "px"
+    
+$(window).resize resize
+resize()
+
+#get the line lengths
+#$("path").each (i) -> console.log @getTotalLength()

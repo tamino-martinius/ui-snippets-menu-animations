@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>🍔  <-> ❌  (version 3)</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <label>
+  <input type="checkbox" />
+  <svg width="512px" height="512px" viewBox="0 0 112 64">
+    <g class="icon">
+      <g class="debug">
+        <path class="bottom-right" d="
+          M 56,32
+          L 72,48
+          C 80,56 80,56 88,56
+          L112,56
+        "></path>
+        <path class="top-right" d="
+          M 56,32
+          L 72,16
+          C 80, 8 80, 8 88, 8
+          L112, 8
+        "></path>
+        <path class="bottom-left" d="
+          M 56,32
+          L 40,48
+          C 32,56 32,56 24,56
+          L  0,56
+        "></path>
+        <path class="top-left" d="
+          M 56,32
+          L 40,16
+          C 32, 8 32, 8 24, 8
+          L  0, 8
+        "></path>
+        <path class="middle" d="
+          M  0,32
+          L112,32
+        "></path>
+      </g>
+      <path class="bottom-right" d="
+        M 56,32
+        L 72,48
+        C 80,56 80,56 88,56
+        L112,56
+      "></path>
+      <path class="top-right" d="
+        M 56,32
+        L 72,16
+        C 80, 8 80, 8 88, 8
+        L112, 8
+      "></path>
+      <path class="bottom-left" d="
+        M 56,32
+        L 40,48
+        C 32,56 32,56 24,56
+        L  0,56
+      "></path>
+      <path class="top-left" d="
+        M 56,32
+        L 40,16
+        C 32, 8 32, 8 24, 8
+        L  0, 8
+      "></path>
+      <path class="middle" d="
+        M  0,32
+        L112,32
+      "></path>
+    </g>
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="2"
+        />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7
+          "
+          result="gooey"
+        />
+        <feBlend
+          in2="gooey"
+          in="SourceGraphic"
+          result="mix"
+        />
+      </filter>
+    </defs>
+  </svg>
+</label>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.3/dat.gui.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
