@@ -24,6 +24,7 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* filter: url('#gooey'); */
 }
 
 path {
