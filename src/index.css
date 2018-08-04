@@ -17,8 +17,12 @@ body {
   position: absolute;
 }
 
-.grid>* {
+.grid > * {
   position: relative;
+}
+
+.line--debug {
+  opacity: .1;
 }
 
 svg {
@@ -42,23 +46,48 @@ path {
   stroke-dashoffset: var(--offset);
 }
 
+.cross.active {
+  .line--1,
+  .line--3 {
+    --length: 22.627416998;
+  }
+
+  .line--2 {
+    --length: 0;
+  }
+}
+
+.back.active {
+  .line--1,
+  .line--3 {
+    --length: 8.602325267;
+  }
+}
+
 .menu--1 {
   background-color: #3f77e9;
+
   .line--1,
   .line--3 {
     --total-length: 126.64183044433594;
   }
+
   .line--2 {
     --total-length: 70;
+  }
+
+  *.active {
   }
 }
 
 .menu--2 {
   background-color: #2c96f2;
+
   .line--1,
   .line--3 {
     --total-length: 182.1348876953125;
   }
+
   .line--2 {
     --total-length: 105;
   }
@@ -66,11 +95,13 @@ path {
 
 .menu--3 {
   background-color: #34adf0;
+
   .line--1,
   .line--3 {
     --total-length: 111.22813415527344;
     --offset: -50.22813415527344;
   }
+
   .line--2 {
     --total-length: 99;
   }
@@ -78,10 +109,12 @@ path {
 
 .menu--4 {
   background-color: #56bce1;
+
   .line--1,
   .line--3 {
     --total-length: 126.38166809082031;
   }
+
   .line--2 {
     --total-length: 80;
   }
@@ -89,10 +122,12 @@ path {
 
 .menu--5 {
   background-color: #79ccd4;
+
   .line--1,
   .line--3 {
     --total-length: 147.96810913085938;
   }
+
   .line--2 {
     --total-length: 105;
   }
@@ -100,11 +135,13 @@ path {
 
 .menu--6 {
   background-color: #9ddbc6;
+
   .line--1,
   .line--3 {
     --total-length: 103.35061645507812;
     --offset: -42.35061645507812;
   }
+
   .line--2 {
     --total-length: 99;
   }
