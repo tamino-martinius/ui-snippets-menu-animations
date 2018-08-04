@@ -16,7 +16,8 @@ body {
   top: calc(50vh - 33vw);
   position: absolute;
 }
-.grid > * {
+
+.grid>* {
   position: relative;
 }
 
@@ -29,7 +30,7 @@ svg {
 
 path {
   fill: none;
-  stroke: #fff;
+  stroke: #ffffff;
   stroke-width: 3;
   stroke-linecap: round;
 }
@@ -41,68 +42,70 @@ path {
   stroke-dashoffset: var(--offset);
 }
 
-.icon--1 { background-color: #3F77E9; }
-.icon--2 { background-color: #2C96F2; }
-.icon--3 { background-color: #34ADF0; }
-.icon--4 { background-color: #56BCE1; }
-.icon--5 { background-color: #79CCD4; }
-.icon--6 { background-color: #9DDBC6; }
+.menu--1 {
+  background-color: #3f77e9;
+  .line--1,
+  .line--3 {
+    --total-length: 126.64183044433594;
+  }
+  .line--2 {
+    --total-length: 70;
+  }
+}
 
-.icon--1 .line--1 { 
-  --total-length: 126.64183044433594;
+.menu--2 {
+  background-color: #2c96f2;
+  .line--1,
+  .line--3 {
+    --total-length: 182.1348876953125;
+  }
+  .line--2 {
+    --total-length: 105;
+  }
 }
-.icon--1 .line--2 { 
-  --total-length: 70;
+
+.menu--3 {
+  background-color: #34adf0;
+  .line--1,
+  .line--3 {
+    --total-length: 111.22813415527344;
+    --offset: -50.22813415527344;
+  }
+  .line--2 {
+    --total-length: 99;
+  }
 }
-.icon--1 .line--3 { 
-  --total-length: 126.64183044433594;
+
+.menu--4 {
+  background-color: #56bce1;
+  .line--1,
+  .line--3 {
+    --total-length: 126.38166809082031;
+  }
+  .line--2 {
+    --total-length: 80;
+  }
 }
-.icon--2 .line--1 { 
-  --total-length: 182.1348876953125;
+
+.menu--5 {
+  background-color: #79ccd4;
+  .line--1,
+  .line--3 {
+    --total-length: 147.96810913085938;
+  }
+  .line--2 {
+    --total-length: 105;
+  }
 }
-.icon--2 .line--2 { 
-  --total-length: 105;
-}
-.icon--2 .line--3 { 
-  --total-length: 182.1348876953125;
-}
-.icon--3 .line--1 { 
-  --total-length: 111.22813415527344;
-  --offset: -50.22813415527344;
-}
-.icon--3 .line--2 { 
-  --total-length: 99;
-}
-.icon--3 .line--3 { 
-  --total-length: 111.22813415527344;
-  --offset: -50.22813415527344;
-}
-.icon--4 .line--1 { 
-  --total-length: 126.38166809082031;
-}
-.icon--4 .line--2 { 
-  --total-length: 80;
-}
-.icon--4 .line--3 { 
-  --total-length: 126.38166809082031;
-}
-.icon--5 .line--1 { 
-  --total-length: 147.96810913085938;
-}
-.icon--5 .line--2 { 
-  --total-length: 105;
-}
-.icon--5 .line--3 { 
-  --total-length: 147.96810913085938;
-}
-.icon--6 .line--1 { 
-  --total-length: 103.35061645507812;
-  --offset: -42.35061645507812;
-}
-.icon--6 .line--2 { 
-  --total-length: 99;
-}
-.icon--6 .line--3 { 
-  --total-length: 103.35061645507812;
-  --offset: -42.35061645507812;
+
+.menu--6 {
+  background-color: #9ddbc6;
+  .line--1,
+  .line--3 {
+    --total-length: 103.35061645507812;
+    --offset: -42.35061645507812;
+  }
+  .line--2 {
+    --total-length: 99;
+  }
 }
