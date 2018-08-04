@@ -10,10 +10,10 @@ body {
 .grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100vw;
-  height: 66vw;
-  top: calc(50vh - 33vw);
+  height: 100vw;
+  top: calc(50vh - 50vw);
   position: absolute;
 }
 
@@ -25,7 +25,6 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* filter: url('#gooey'); */
 }
 
 path {
@@ -33,13 +32,12 @@ path {
   stroke: #ffffff;
   stroke-width: 3;
   stroke-linecap: round;
-}
-
-.menu path {
+  stroke-linejoin: round;
   --length: 24;
   --offset: -38;
   stroke-dasharray: var(--length) var(--total-length);
   stroke-dashoffset: var(--offset);
+  transition: all .8s cubic-bezier(.645, .045, .355, 1);
 }
 
 .cross.active {
@@ -85,40 +83,7 @@ path {
 }
 
 .menu--2 {
-  background-color: #2c96f2;
-
-  .line--1,
-  .line--3 {
-    --total-length: 182.1348876953125;
-  }
-
-  .line--2 {
-    --total-length: 105;
-  }
-
-  &.active {
-    .line--1,
-    .line--3 {
-      --offset: calc(9.8994949366 - var(--total-length) + var(--length));
-    }
-
-    .line--1 {
-      transform: translateX(-96px) translateY(35px);
-    }
-
-    .line--3 {
-      transform: translateX(-96px) translateY(-35px);
-    }
-
-    .line--2 {
-      transform: translateX(-44px);
-      --offset: -93;
-    }
-  }
-}
-
-.menu--3 {
-  background-color: #34adf0;
+  background-color: #0095f9;
 
   .line--1,
   .line--3 {
@@ -146,8 +111,8 @@ path {
   }
 }
 
-.menu--4 {
-  background-color: #56bce1;
+.menu--3 {
+  background-color: #00aef6;
 
   .line--1,
   .line--3 {
@@ -166,41 +131,8 @@ path {
   }
 }
 
-.menu--5 {
-  background-color: #79ccd4;
-
-  .line--1,
-  .line--3 {
-    --total-length: 147.96810913085938;
-  }
-
-  .line--2 {
-    --total-length: 105;
-  }
-
-  &.active {
-    .line--1,
-    .line--3 {
-      --offset: calc(8.602325267 - var(--total-length) + var(--length));
-    }
-
-    .line--1 {
-      transform: translateX(-89px) translateY(10px);
-    }
-
-    .line--3 {
-      transform: translateX(-89px) translateY(-10px);
-    }
-
-    .line--2 {
-      transform: translateX(-38px);
-      --offset: -75;
-    }
-  }
-}
-
-.menu--6 {
-  background-color: #9ddbc6;
+.menu--4 {
+  background-color: #18bee5;
 
   .line--1,
   .line--3 {
@@ -229,6 +161,6 @@ path {
 }
 
 path.line--debug {
-  opacity: .1;
-  stroke-dasharray: none;
+  // opacity: .1;
+  // stroke-dasharray: none;
 }
