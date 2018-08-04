@@ -12,19 +12,49 @@ body {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   width: 100vw;
-  height: 100vw;
-  top: calc(50vh - 50vw);
+  height: 100vh;
   position: absolute;
 }
 
-.grid > * {
+.grid>* {
   position: relative;
+}
+
+.menu {
+  cursor: pointer;
 }
 
 svg {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 50vw;
+  height: 50vw;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  svg {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+
+.menu--1 svg,
+.menu--2 svg {
+  bottom: 0;
+}
+
+.menu--3 svg,
+.menu--4 svg {
+  top: 0;
+}
+
+.menu--1 svg,
+.menu--3 svg {
+  right: 0;
+}
+
+.menu--2 svg,
+.menu--4 svg {
+  left: 0;
 }
 
 path {
@@ -45,7 +75,6 @@ path {
   .line--3 {
     --length: 22.627416998;
   }
-
   .line--2 {
     --length: 0;
   }
@@ -60,22 +89,18 @@ path {
 
 .menu--1 {
   background-color: #3f77e9;
-
   .line--1,
   .line--3 {
     --total-length: 126.64183044433594;
   }
-
   .line--2 {
     --total-length: 70;
   }
-
   &.active {
     .line--1,
     .line--3 {
       --offset: calc(9.8994949366 + var(--length) - var(--total-length));
     }
-
     .line--2 {
       --offset: -50;
     }
@@ -84,27 +109,22 @@ path {
 
 .menu--2 {
   background-color: #0095f9;
-
   .line--1,
   .line--3 {
     --total-length: 111.22813415527344;
     --offset: -50.22813415527344;
   }
-
   .line--2 {
     --total-length: 99;
   }
-
   &.active {
     path {
       transform: translateX(30px);
     }
-
     .line--1,
     .line--3 {
       --offset: -16.9705627485;
     }
-
     .line--2 {
       --offset: -20;
     }
@@ -113,16 +133,13 @@ path {
 
 .menu--3 {
   background-color: #00aef6;
-
   .line--1,
   .line--3 {
     --total-length: 126.38166809082031;
   }
-
   .line--2 {
     --total-length: 80;
   }
-
   &.active {
     .line--1,
     .line--3 {
@@ -133,27 +150,22 @@ path {
 
 .menu--4 {
   background-color: #18bee5;
-
   .line--1,
   .line--3 {
     --total-length: 103.35061645507812;
     --offset: -42.35061645507812;
   }
-
   .line--2 {
     --total-length: 99;
   }
-
   &.active {
     path {
       transform: translateX(31px);
     }
-
     .line--1,
     .line--3 {
       --offset: -8.602325267;
     }
-
     .line--2 {
       --offset: -7;
     }
