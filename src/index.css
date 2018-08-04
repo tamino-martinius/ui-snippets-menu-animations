@@ -21,10 +21,6 @@ body {
   position: relative;
 }
 
-.line--debug {
-  opacity: .1;
-}
-
 svg {
   position: absolute;
   width: 100%;
@@ -76,7 +72,15 @@ path {
     --total-length: 70;
   }
 
-  *.active {
+  &.active {
+    .line--1,
+    .line--3 {
+      --offset: calc(9.8994949366 + var(--length) - var(--total-length));
+    }
+
+    .line--2 {
+      --offset: -50;
+    }
   }
 }
 
@@ -90,6 +94,26 @@ path {
 
   .line--2 {
     --total-length: 105;
+  }
+
+  &.active {
+    .line--1,
+    .line--3 {
+      --offset: calc(9.8994949366 - var(--total-length) + var(--length));
+    }
+
+    .line--1 {
+      transform: translateX(-96px) translateY(35px);
+    }
+
+    .line--3 {
+      transform: translateX(-96px) translateY(-35px);
+    }
+
+    .line--2 {
+      transform: translateX(-44px);
+      --offset: -93;
+    }
   }
 }
 
@@ -105,6 +129,21 @@ path {
   .line--2 {
     --total-length: 99;
   }
+
+  &.active {
+    path {
+      transform: translateX(30px);
+    }
+
+    .line--1,
+    .line--3 {
+      --offset: -16.9705627485;
+    }
+
+    .line--2 {
+      --offset: -20;
+    }
+  }
 }
 
 .menu--4 {
@@ -118,6 +157,13 @@ path {
   .line--2 {
     --total-length: 80;
   }
+
+  &.active {
+    .line--1,
+    .line--3 {
+      --offset: calc(8.602325267 - var(--total-length) + var(--length));
+    }
+  }
 }
 
 .menu--5 {
@@ -130,6 +176,26 @@ path {
 
   .line--2 {
     --total-length: 105;
+  }
+
+  &.active {
+    .line--1,
+    .line--3 {
+      --offset: calc(8.602325267 - var(--total-length) + var(--length));
+    }
+
+    .line--1 {
+      transform: translateX(-89px) translateY(10px);
+    }
+
+    .line--3 {
+      transform: translateX(-89px) translateY(-10px);
+    }
+
+    .line--2 {
+      transform: translateX(-38px);
+      --offset: -75;
+    }
   }
 }
 
@@ -145,4 +211,24 @@ path {
   .line--2 {
     --total-length: 99;
   }
+
+  &.active {
+    path {
+      transform: translateX(31px);
+    }
+
+    .line--1,
+    .line--3 {
+      --offset: -8.602325267;
+    }
+
+    .line--2 {
+      --offset: -7;
+    }
+  }
+}
+
+path.line--debug {
+  opacity: .1;
+  stroke-dasharray: none;
 }
