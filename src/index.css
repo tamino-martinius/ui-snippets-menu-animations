@@ -116,7 +116,7 @@ label:hover circle {
   input:checked + svg {
     .line--1,
     .line--3 {
-      --offset: calc(9.8994949366 + var(--length) - var(--total-length));
+      --offset: -94.1149185097;
     }
 
     .line--2 {
@@ -169,7 +169,7 @@ label:hover circle {
   input:checked + svg {
     .line--1,
     .line--3 {
-      --offset: calc(8.602325267 - var(--total-length) + var(--length));
+      --offset: -109.1770175568;
     }
   }
 }
