@@ -7,6 +7,10 @@ body {
   background-color: #121314;
 }
 
+input {
+  display: none;
+}
+
 .grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -20,40 +24,38 @@ body {
   position: relative;
 }
 
-.menu {
+label {
+  display: block;
   cursor: pointer;
-}
-
-svg {
   position: absolute;
   width: 50vw;
   height: 50vw;
 }
 
 @media (min-aspect-ratio: 1/1) {
-  svg {
+  label {
     width: 50vh;
     height: 50vh;
   }
 }
 
-.menu--1 svg,
-.menu--2 svg {
+.menu--1 label,
+.menu--2 label {
   bottom: 0;
 }
 
-.menu--3 svg,
-.menu--4 svg {
+.menu--3 label,
+.menu--4 label {
   top: 0;
 }
 
-.menu--1 svg,
-.menu--3 svg {
+.menu--1 label,
+.menu--3 label {
   right: 0;
 }
 
-.menu--2 svg,
-.menu--4 svg {
+.menu--2 label,
+.menu--4 label {
   left: 0;
 }
 
@@ -70,7 +72,16 @@ path {
   transition: all .8s cubic-bezier(.645, .045, .355, 1);
 }
 
-.cross.active {
+circle {
+  fill: #fff3;
+  opacity: 0;
+}
+
+label:hover circle {
+  opacity: 1;
+}
+
+.cross input:checked+svg {
   .line--1,
   .line--3 {
     --length: 22.627416998;
@@ -80,7 +91,7 @@ path {
   }
 }
 
-.back.active {
+.back input:checked+svg {
   .line--1,
   .line--3 {
     --length: 8.602325267;
@@ -96,7 +107,7 @@ path {
   .line--2 {
     --total-length: 70;
   }
-  &.active {
+  input:checked+svg {
     .line--1,
     .line--3 {
       --offset: calc(9.8994949366 + var(--length) - var(--total-length));
@@ -117,7 +128,7 @@ path {
   .line--2 {
     --total-length: 99;
   }
-  &.active {
+  input:checked+svg {
     path {
       transform: translateX(30px);
     }
@@ -140,7 +151,7 @@ path {
   .line--2 {
     --total-length: 80;
   }
-  &.active {
+  input:checked+svg {
     .line--1,
     .line--3 {
       --offset: calc(8.602325267 - var(--total-length) + var(--length));
@@ -158,7 +169,7 @@ path {
   .line--2 {
     --total-length: 99;
   }
-  &.active {
+  input:checked+svg {
     path {
       transform: translateX(31px);
     }
