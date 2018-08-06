@@ -2,6 +2,6 @@
 
 Four different menu animations for menu button toggle between hamburger, cross and back icon.
 
-![Preview](public/preview.gif?raw=true)
+You can see a full page Preview on [GitHub Pages](https://tamino-martinius.github.io/ui-snippets-menu-animations) or do quick changes on [CodePen](https://codepen.io/Zaku/pen/ejLNJL/).
 
-[Preview](https://tamino-martinius.github.io/ui-snippets-menu-animations)
+![Preview](public/preview.gif?raw=true)
