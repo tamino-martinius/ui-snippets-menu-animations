@@ -14,6 +14,22 @@ debugCheckbox.addEventListener('change', () => {
     }
   }
 });
+const toggleCheckbox: HTMLInputElement = <any>document.getElementById('menu-or-dots');
+toggleCheckbox.addEventListener('click', () => {
+  console.log('x');
+
+  if (toggleCheckbox.classList.contains('menu')) {
+    Array.from(document.getElementsByClassName('menu')).map(elem => {
+      elem.classList.remove('menu');
+      elem.classList.add('dots');
+    });
+  } else {
+    Array.from(document.getElementsByClassName('dots')).map(elem => {
+      elem.classList.remove('dots');
+      elem.classList.add('menu');
+    });
+  }
+});
 let currentActive = 0;
 const checkboxes: HTMLInputElement[] = <any>document.querySelectorAll('.grid input');
 const autoShow = setInterval(() => {
