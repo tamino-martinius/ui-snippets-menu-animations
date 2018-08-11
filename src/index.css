@@ -214,14 +214,13 @@ label:hover circle {
 }
 
 @media screen and (min-width: 800px) {
-  .debug {
+  .debug,
+  #menu-or-dots {
     opacity: .8;
     display: block;
     position: absolute;
     z-index: 1;
-    font-family: sans-serif;
-    transform: rotate(-45deg);
-    transform-origin: 0% 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     background: #000000;
     color: #ffffff;
     width: 150px;
@@ -237,6 +236,27 @@ label:hover circle {
     &.active {
       background: #ffffff;
       color: #000000;
+    }
+  }
+
+  .debug {
+    transform: rotate(-45deg);
+    transform-origin: 0% 100%;
+  }
+
+  #menu-or-dots {
+    font-weight: normal;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    right: 0;
+    top: 0;
+
+    &.menu:before {
+      content: '⋮';
+    }
+
+    &.dots:before {
+      content: '☰';
     }
   }
 
